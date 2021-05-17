@@ -8,9 +8,9 @@ public class Utils
 {
     public static void logMessage(Message message)
     {
-        log.info(String.format("\n%s:%s,\n%s\n",
+        System.out.printf("\n%s:%s,\n%s\n%n",
                 message.getSender(),
                 message.getMessage(),
-                message.getDateAndTime()));
+                message.getDateAndTime());
     }
 }
