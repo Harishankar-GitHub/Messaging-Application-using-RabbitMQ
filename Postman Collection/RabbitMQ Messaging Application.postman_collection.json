@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "c26b17ed-2abe-42c0-96ea-831259ebbe94",
+		"name": "RabbitMQ Messaging Application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Send Mesasge to A",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sender\": \"Jack\",\r\n    \"message\": \"I'm good! How are you?\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9092/sendMessageToA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"sendMessageToA"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Message To B",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sender\": \"Harish\",\r\n    \"message\": \"Hey Jack! How are you doing! \"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9091/sendMessageToB",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"sendMessageToB"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
