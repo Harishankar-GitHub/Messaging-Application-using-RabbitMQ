@@ -5,6 +5,9 @@
 - Install using [Chocolatey](https://community.chocolatey.org/packages/rabbitmq).
 > This installs Erlang as well as RabbitMQ.
 - Run using [Docker](https://hub.docker.com/_/rabbitmq)
+```
+docker run -d --hostname my-rabbit --name some-rabbit -p 15672:15672 -p 5672:5672 rabbitmq:3-management
+```
 > This image has Erlang as well as RabbitMQ.
 
 ### Microservices (User-A & User-B)
